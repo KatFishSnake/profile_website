@@ -7,11 +7,11 @@ body {
 		overflow: auto;
 		padding: 1rem 1rem 3rem 1rem;
 
-		@media #{$bp-xsm-sm} {
-			padding: 3rem 4rem 4rem 4rem;
+		@media #{$bp-sm} {
+			padding: 2.5rem;
 		}
 
-		@media #{$bp-sm} {
+		@media #{$bp-sm-md} {
 			padding: 5rem 4rem 4rem 4rem;
 		}
 
