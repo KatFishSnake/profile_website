@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+    Developer: Andre Kuznetcov
+    From: Vancouver, Canada
+
+# TECHNOLOGY COLOPHON
+    HTML5, CSS3, Jade, SCSS
+
+# SITE
+    Last update:2016/07/01
+    Language: English
+    Doctype:HTML5
+    IDE: Sublime Text 3

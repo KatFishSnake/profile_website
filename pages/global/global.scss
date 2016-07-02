@@ -1,0 +1,187 @@
+// Import fonts
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+// Colors
+
+$primary: #333;
+$secondary: #222;
+$tertiary: #f0f0f0;
+
+$highlight-primary: #65BE9A;
+
+// Values
+
+$base-font-size: 16px;
+$side-padding: 3em;
+$side-padding-mobile: 1em;
+$max-body-width: 70em;
+
+
+/* ==========================================================================
+   Global styles
+   ========================================================================== */
+
+html {
+    color: $secondary;
+    font-size: $base-font-size;
+    line-height: 1.4;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Varela Round', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	background-color: $tertiary;
+    overflow-x: hidden;
+    overflow-y: auto; 
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+header, 
+footer, 
+article, 
+section, 
+div,
+nav, 
+menu { 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+a { 
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin-top: 0; 
+}
+
+section,
+header,
+footer {
+    margin: 0;
+    width: 100%;
+    display: block;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
