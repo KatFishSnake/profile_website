@@ -5,13 +5,28 @@ body {
 		width: 100%;
 		height: 100%;
 		overflow: auto;
-		padding-top: 5rem;
+		padding: 1rem 1rem 3rem 1rem;
+
+		@media #{$bp-xsm-sm} {
+			padding: 3rem 4rem 4rem 4rem;
+		}
+
+		@media #{$bp-sm} {
+			padding: 5rem 4rem 4rem 4rem;
+		}
+
+	    -webkit-transition: padding 1s ease 0s;
+	    -moz-transition: padding 1s ease 0s;
+	    -o-transition: padding 1s ease 0s;
+	    transition: padding 1s ease 0s;
 	}
 
 	section {
 		&.about {
-		    width: 48rem;
-		    height: 26rem;
+			position: relative;
+			z-index: $padds-index;
+		    max-width: 48rem;
+		    width: 100%;
 
 	        padding: 2rem 1.5rem;
 		    margin: 0 auto;
@@ -24,16 +39,39 @@ body {
 			// Works like display flex
 			font-size: 0;
 
+			.desktop-only {
+			    display: none;
+
+			    @media #{$bp-sm} {
+			        display: block;
+			    }
+			}
+
+			.mobile-only {
+			    display: block;
+
+			    @media #{$bp-sm} {
+			        display: none;
+			    }
+			}
+
 			> div {
-				display: inline-block;
-				height: 100%;
+				display: block;
+				width: 100%;
 				font-size: $base-font-size;
 				vertical-align: top;
+
+				@media #{$bp-sm} {
+					display: inline-block;
+
+					&.description { width: 60%; }
+					&.profile { width: 40%; }
+				}
 			}
 
 			.description {
-				width: 60%;
-
+			    @media #{$bp-sm} { padding-left: 1rem; }
+			    
 				h1 {
 					color: $highlight-primary;
 				    margin-bottom: .5rem;
@@ -49,17 +87,19 @@ body {
 			}
 
 			.profile {
-				width: 40%;
-
 				.picture {
 					width: 100%;
 
 					img {
-					    width: 70%;
+					    width: 100%;
 						max-width: 15em;
 						border-radius: 50%;
 						margin: 0 auto;
 						display: block;
+
+					    @media #{$bp-sm} {
+					    	width: 70%;
+					    }
 					}
 				}
 
@@ -81,33 +121,33 @@ body {
 						vertical-align: middle;
 					}
 				}
+			}
 
-				.contact {
-				    a {
-			    		width: 13rem;
-			    		text-align: left;
-				    	display: block;
-				    	margin: .5rem auto;
-				    }
+			.contact {
+			    a {
+					width: 13rem;
+					text-align: left;
+			    	display: block;
+			    	margin: .5rem auto;
+			    }
 
-				    i {
-			    	    font-size: 1.2rem;
-    					vertical-align: middle;
-				    }
+			    i {
+				    font-size: 1.2rem;
+					vertical-align: middle;
+			    }
 
-				    span {
-			    	    font-size: .9rem;
-    					font-weight: bold;
-				    }
+			    span {
+				    font-size: .9rem;
+					font-weight: bold;
+			    }
 
-				    a.location {
-			    		cursor: default;
-				    }
+			    a.location {
+					cursor: default;
+			    }
 
-				    a.email:hover {
-			    		color: $highlight-primary;
-				    }
-				}
+			    a.email:hover {
+					color: $highlight-primary;
+			    }
 			}
 		}
 	}

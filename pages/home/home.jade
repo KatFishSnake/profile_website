@@ -19,13 +19,6 @@ html.no-js(lang="")
 	body
 		.wrapper
 			section.about
-				.description
-					h1 Andre Kuznetcov
-					h3 Front-end Developer specializing in AngularJS and NodeJS
-					p Hi, I'm a full-stack web developer currently living in welcoming Vancouver. 
-					p I'm able to produce a website or a web-application from ideation, mockups realisation, full-on development, to an automated deployment to a cloud server and continuous monitoring and support. 
-					p Additionally I provide support in SE registration and optimization, cloud infrastructure optimization and server security.
-
 				.profile
 					.picture
 						img(src="/assets/profile.jpg" alt="Shiny face of mine")
@@ -38,13 +31,29 @@ html.no-js(lang="")
 							i.pw-twitter
 						a(href="https://ca.linkedin.com/in/andrewebdev" title="LinkedIn profile" target="_blank")
 							i.pw-linkedin
-					.contact
+								
+					.contact.desktop-only
 						a.email(href="mailto:andre.kuzn@icloud.com?Subject=Hello%20")
 							i.pw-paper-plane 
 							span andre.kuzn@icloud.com
 						a.location(href="javascript:void(0)")
 							i.pw-compass2 
 							span Vancouver, BC
+
+				.description
+					h1 Andre Kuznetcov
+					h3 Front-end Developer specializing in AngularJS and NodeJS
+					p Hi, I'm a full-stack web developer currently living in welcoming Vancouver. 
+					p I'm able to produce a website or a web-application from ideation, mockups realisation, full-on development, to an automated deployment to a cloud server and continuous monitoring and support. 
+					p Additionally I provide support in SE registration and optimization, cloud infrastructure optimization and server security.
+
+				.contact.mobile-only
+					a.email(href="mailto:andre.kuzn@icloud.com?Subject=Hello%20")
+						i.pw-paper-plane 
+						span andre.kuzn@icloud.com
+					a.location(href="javascript:void(0)")
+						i.pw-compass2 
+						span Vancouver, BC
 
 			footer
 				span.copy Copyright &copy; 2016

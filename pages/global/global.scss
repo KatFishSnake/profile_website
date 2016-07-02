@@ -1,6 +1,20 @@
 // Import fonts
 @import url(https://fonts.googleapis.com/css?family=Varela+Round);
 
+// Media breakpoints
+$bp-xxxsm: "only screen and (min-width: 400px)";
+$bp-xxsm: "only screen and (min-width: 460px)";
+$bp-xsm: "only screen and (min-width: 500px)";
+$bp-xsm-sm: "only screen and (min-width: 540px)";
+$bp-sm: "only screen and (min-width: 640px)";
+$bp-sm-md: "only screen and (min-width: 700px)";
+$bp-md: "only screen and (min-width: 768px)";
+$bp-md-lg: "only screen and (min-width: 870px)";
+$bp-lg: "only screen and (min-width: 960px)";
+$bp-xlg: "only screen and (min-width: 1024px)";
+$bp-xlg-xxlg: "only screen and (min-width: 1100px)";
+$bp-xxlg: "only screen and (min-width: 1200px)";
+
 // Colors
 
 $primary: #333;
@@ -15,6 +29,8 @@ $base-font-size: 16px;
 $side-padding: 3em;
 $side-padding-mobile: 1em;
 $max-body-width: 70em;
+
+$padds-index: 9;
 
 
 /* ==========================================================================
