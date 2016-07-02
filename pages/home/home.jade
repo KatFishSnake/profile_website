@@ -18,10 +18,10 @@ html.no-js(lang="")
 
 	body
 		.wrapper
-			section.about
+			section.about(itemscope itemprop="person" itemtype="http://schema.org/Person" url="andrekuznetcov.com")
 				.profile
 					.picture
-						img(src="/assets/profile.jpg" alt="Shiny face of mine")
+						img(src="/assets/profile.jpg" itemprop="image" alt="Shiny face of mine")
 					.soc-media
 						a(href="https://github.com/KatFishSnake" title="Github profile" target="_blank")
 							i.pw-github
@@ -31,19 +31,19 @@ html.no-js(lang="")
 							i.pw-twitter
 						a(href="https://ca.linkedin.com/in/andrewebdev" title="LinkedIn profile" target="_blank")
 							i.pw-linkedin
-								
+
 					.contact.desktop-only
 						a.email(href="mailto:andre.kuzn@icloud.com?Subject=Hello%20")
 							i.pw-paper-plane 
-							span andre.kuzn@icloud.com
+							span(itemprop="email") andre.kuzn@icloud.com
 						a.location(href="javascript:void(0)")
 							i.pw-compass2 
-							span Vancouver, BC
+							span(itemprop="workLocation") Vancouver, BC
 
 				.description
-					h1 Andre Kuznetcov
-					h3 Front-end Developer specializing in AngularJS and NodeJS
-					p Hi, I'm a full-stack web developer currently living in welcoming Vancouver. 
+					h1(itemprop="name") Andre Kuznetcov
+					h3(itemprop="jobTitle") Front-end Developer specializing in AngularJS and NodeJS
+					p(itemprop="description") Hi, I'm a full-stack web developer currently living in welcoming Vancouver. 
 					p I'm able to produce a website or a web-application from ideation, mockups realisation, full-on development, to an automated deployment to a cloud server and continuous monitoring and support. 
 					p Additionally I provide support in SE registration and optimization, cloud infrastructure optimization and server security.
 
