@@ -33,10 +33,10 @@ html.no-js(lang="")
 							i.pw-linkedin
 
 					.contact.desktop-only
-						a.email(href="mailto:andre.kuzn@icloud.com?Subject=Hello%20")
+						a.email(href="#")
 							i.pw-paper-plane 
-							span(itemprop="email") andre.kuzn@icloud.com
-						a.location(href="javascript:void(0)")
+							span(itemprop="email") Click to email
+						span.location
 							i.pw-compass2 
 							span(itemprop="workLocation") Vancouver, BC
 
@@ -53,22 +53,17 @@ html.no-js(lang="")
 						| &#128521
 
 				.contact.mobile-only
-					a.email(href="mailto:andre.kuzn@icloud.com?Subject=Hello%20")
+					a.email(href="#")
 						i.pw-paper-plane 
-						span andre.kuzn@icloud.com
-					a.location(href="javascript:void(0)")
+						span Click to email
+					span.location
 						i.pw-compass2 
 						span Vancouver, BC
 
 			footer
 				span.copy Copyright &copy; 2016
 
-		script.
-			// Was about to display https://imgflip.com/i/16y9za here
-			// But console doesn't render images anymore :(
-			console.log("%cWell, hello there!", "font-weight:bold; color: grey; font-size:16pt");
-			console.log("%cIf you are interested in anything related to this website, its source is publicly available here: https://github.com/KatFishSnake/profile_website", "font-weight:bold; color: grey; font-size:16pt");
-
+		script(src="/home/home.js" defer async)
 		script.
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

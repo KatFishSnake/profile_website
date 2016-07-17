@@ -138,11 +138,17 @@ body {
 					margin-top: 0;
 				}
 
+			    > span,
 			    a {
 					width: 13rem;
 					text-align: left;
 			    	display: block;
 			    	margin: .5rem auto;
+			    	
+				    span {
+					    font-size: .9rem;
+						font-weight: bold;
+				    }
 			    }
 
 			    i {
@@ -150,12 +156,7 @@ body {
 					vertical-align: middle;
 			    }
 
-			    span {
-				    font-size: .9rem;
-					font-weight: bold;
-			    }
-
-			    a.location {
+			    > span.location {
 					cursor: default;
 			    }
 

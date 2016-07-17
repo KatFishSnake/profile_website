@@ -1,6 +1,7 @@
 var gulp = require("gulp"),
 	sass = require("gulp-sass"),
 	csso = require("gulp-csso"), // Css minifier
+	uglify = require("gulp-uglify"),
 	jade = require("gulp-jade");
 
 var config = {
@@ -40,14 +41,22 @@ gulp.task("tpl", function() {
 		.pipe(gulp.dest(config.path.dest));
 });
 
+gulp.task("js", function() {
+	return gulp.src(config.path.js)
+		.pipe(uglify())
+		.pipe(gulp.dest(config.path.dest));
+});
+
 gulp.task("watch", function() {
 	gulp.watch(config.path.style_all, ["css"]);
 
 	gulp.watch(config.path.tpl_all, ["tpl"]);
+
+	gulp.watch(config.path.js, ["js"]);
 });
 
 // Prod task
-gulp.task("build", ["css", "tpl"]);
+gulp.task("build", ["css", "tpl", "js"]);
 
 // Default Task for development
 gulp.task("default", ["build", "watch"]);

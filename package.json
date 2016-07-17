@@ -4,16 +4,21 @@
   "description": "Just personal website of my to represent me and my work",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "./node_modules/gulp/bin/gulp.js build",
+    "watch": "./node_modules/gulp/bin/gulp.js",
+    "serve": "./node_modules/nodemon/bin/nodemon.js server.js"
   },
   "author": "Andre Kuznetcov",
   "license": "ISC",
   "dependencies": {
+    "compression": "^1.6.2",
     "express": "^4.14.0",
     "gulp": "^3.9.1",
     "gulp-csso": "^2.0.0",
     "gulp-jade": "^1.1.0",
     "gulp-sass": "^2.3.2",
-    "helmet": "^2.1.1"
+    "gulp-uglify": "^1.5.4",
+    "helmet": "^2.1.1",
+    "nodemon": "^1.9.2"
   }
 }
