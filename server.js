@@ -5,7 +5,9 @@ var express = require("express"),
     // Helmet server security optimization (passive)
     helmet = require("helmet"),
     // File compression for browser
-    compression = require('compression');
+    compression = require('compression'),
+    // Cache headers for all res
+    cache = require('express-cache-headers');
 
 // Global routes
 var config = {
@@ -90,6 +92,9 @@ app.use(function (req, res, next) {
 
 // Compression plugin
 app.use(compression({filter: shouldCompress}));
+
+// Set Cache-headers ( 1 hour )
+app.use(cache(3600));
 
 // Generic assets to use
 app.use("/", express.static(path.resolve(config.path.public)));
