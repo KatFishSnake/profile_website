@@ -55,10 +55,10 @@ app.use(helmet.contentSecurityPolicy({
     // Specify directives as normal. 
     directives: {
         defaultSrc: ["'self'", '*.andrekuznetcov.com', 'andrekuznetcov.com'],
-        scriptSrc: ["'self'", "'unsafe-inline'", "*.google-analytics.com"],
+        scriptSrc: ["'self'", "'unsafe-inline'", "www.google-analytics.com"],
         styleSrc: ["'self'", "'unsafe-inline'", 'fonts.googleapis.com', 'fonts.gstatic.com', 'cdnjs.cloudflare.com'],
         fontSrc: ["'self'", 'fonts.gstatic.com', 'fonts.googleapis.com'],
-        imgSrc: ["'self'", "*.google-analytics.com"],
+        imgSrc: ["'self'", "www.google-analytics.com"],
         sandbox: ['allow-scripts', 'allow-same-origin', 'allow-popups'],
         objectSrc: [] // An empty array allows nothing through 
     },
