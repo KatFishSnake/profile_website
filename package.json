@@ -9,7 +9,9 @@
     "serve": "./node_modules/nodemon/bin/nodemon.js server.js"
   },
   "author": "Andre Kuznetcov",
-  "license": "ISC",
+  "license": "UNLICENSED",
+  "private": true,
+  "homepage": "childrenofart.org",
   "dependencies": {
     "compression": "^1.6.2",
     "express": "^4.14.0",
