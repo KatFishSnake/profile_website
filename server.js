@@ -57,7 +57,7 @@ app.use(helmet.contentSecurityPolicy({
     // Specify directives as normal. 
     directives: {
         defaultSrc: ["'self'", '*.andrekuznetcov.com', 'andrekuznetcov.com'],
-        scriptSrc: ["'self'", "'unsafe-inline'", "www.google-analytics.com", "d1l6p2sc9645hc.cloudfront.net", "data2.gosquared.com"],
+        scriptSrc: ["'self'", "data:", "'unsafe-inline'", "www.google-analytics.com", "d1l6p2sc9645hc.cloudfront.net", "data2.gosquared.com"],
         styleSrc: ["'self'", "'unsafe-inline'", 'fonts.googleapis.com', 'fonts.gstatic.com', 'cdnjs.cloudflare.com'],
         fontSrc: ["'self'", 'fonts.gstatic.com', 'fonts.googleapis.com'],
         imgSrc: ["'self'", "data:", "www.google-analytics.com"],
