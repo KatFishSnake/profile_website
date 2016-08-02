@@ -10,8 +10,9 @@
 <!--[endif]-->
 <!--[if gt IE 8]-->
 <html lang="" class="no-js">
-  <!--[endif]-->
-  <head>
+<!--[endif]-->
+
+<head>
     <title>Andre WebDev</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -65,78 +66,112 @@
     <meta name="msapplication-tap-highlight" content="no">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Varela+Round">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
-	<style>
-		* {
-		    line-height: 1.2;
-		    margin: 0;
-		}
-
-		html {
-		    color: #888;
-		    display: table;
-		    font-family: sans-serif;
-		    height: 100%;
-		    text-align: center;
-		    width: 100%;
-		}
-
-		body {
-            font-family: 'Varela Round', sans-serif;
-		    display: table-cell;
-		    vertical-align: middle;
-		    margin: 2em auto;
-		}
-
-		h1 {
-		    color: #65BE9A;
-		    font-size: 2em;
-		    font-weight: 400;
-		}
-
-		p {
-		    margin: 0 auto;
-		    width: 280px;
-		}
-
-        a {
-            font-weight: bold;
-            letter-spacing: .4px;
-            margin-top: 1em;
-            display: inline-block;
-            text-decoration: none;
-            color: #65BE9A;
+    <style>
+    * {
+        line-height: 1.2;
+        margin: 0;
+    }
+    
+    html {
+        color: #888;
+        display: table;
+        font-family: sans-serif;
+        height: 100%;
+        text-align: center;
+        width: 100%;
+    }
+    
+    body {
+        font-family: 'Varela Round', sans-serif;
+        display: table-cell;
+        vertical-align: middle;
+        margin: 2em auto;
+        background-color: #f0f0f0;
+        margin: 0px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .content {
+        position: relative;
+        z-index: 999;
+    }
+    
+    #background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+    }
+    
+    h1 {
+        color: #65BE9A;
+        font-size: 2em;
+        font-weight: 400;
+    }
+    
+    p {
+        margin: 0 auto;
+        width: 280px;
+    }
+    
+    a {
+        font-weight: bold;
+        letter-spacing: .4px;
+        margin-top: 1em;
+        display: inline-block;
+        text-decoration: none;
+        color: #65BE9A;
+    }
+    
+    a:hover {
+        color: #619e85;
+    }
+    
+    @media only screen and (max-width: 280px) {
+        body,
+        p {
+            width: 95%;
         }
-
-        a:hover {
-            color: #619e85;
+        h1 {
+            font-size: 1.5em;
+            margin: 0 0 0.3em;
         }
+    }
+    </style>
+</head>
 
-		@media only screen and (max-width: 280px) {
-
-		    body, p {
-		        width: 95%;
-		    }
-
-		    h1 {
-		        font-size: 1.5em;
-		        margin: 0 0 0.3em;
-		    }
-
-		}
-	</style>
-  </head>
-  <body>
-    <h1>Page Not Found</h1>
-    <p>Sorry, but the page you were trying to view does not exist.</p>
-    <a href="/">&lt;Go back home&gt;</a>
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="content">
+        <h1>Page Not Found</h1>
+        <p>Sorry, but the page you were trying to view does not exist.</p>
+        <a href="/">&lt;Go back home&gt;</a>
+    </div>
+    <div id="background" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js"></script>
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-62962703-3', 'auto');
-      ga('send', 'pageview');
+        !function(){function r(){b=document.getElementById("background"),e=new THREE.PerspectiveCamera(45,window.innerWidth/window.innerHeight,1,4e3),e.position.z=850,f=new THREE.Scene,a=new THREE.Group,f.add(a);var c=m*m;h=new Float32Array(3*c),i=new Float32Array(3*c);new THREE.PointsMaterial({color:16777215,size:8,blending:THREE.AdditiveBlending,transparent:!0,sizeAttenuation:!0});j=new THREE.BufferGeometry,k=new Float32Array(3*m);for(var q=0;q<m;q++){var r=Math.random()*o-o/2,t=Math.random()*o-o/2,u=Math.random()*o-o/2;k[3*q]=r,k[3*q+1]=t,k[3*q+2]=u,d.push({velocity:new THREE.Vector3(-1+2*Math.random(),-1+2*Math.random(),-1+2*Math.random()),numConnections:0})}j.setDrawRange(0,n),j.addAttribute("position",new THREE.BufferAttribute(k,3).setDynamic(!0));var v=new THREE.BufferGeometry;v.addAttribute("position",new THREE.BufferAttribute(h,3).setDynamic(!0)),v.addAttribute("color",new THREE.BufferAttribute(i,3).setDynamic(!0)),v.computeBoundingSphere(),v.setDrawRange(0,0);var w=new THREE.LineBasicMaterial({vertexColors:THREE.VertexColors,blending:THREE.AdditiveBlending,transparent:!0});l=new THREE.LineSegments(v,w),a.add(l),g=new THREE.WebGLRenderer({antialias:!0}),g.setPixelRatio(window.devicePixelRatio),g.setSize(window.innerWidth,window.innerHeight),g.setClearColor(15790320,1),g.gammaInput=!0,g.gammaOutput=!0,b.appendChild(g.domElement),window.addEventListener("resize",s,!1)}function s(){e.aspect=window.innerWidth/window.innerHeight,e.updateProjectionMatrix(),g.setSize(window.innerWidth,window.innerHeight)}function t(){for(var a=0,b=0,c=0,e=0;e<n;e++)d[e].numConnections=0;for(var e=0;e<n;e++){var f=d[e];if(k[3*e]+=f.velocity.x,k[3*e+1]+=f.velocity.y,k[3*e+2]+=f.velocity.z,(k[3*e+1]<-p||k[3*e+1]>p)&&(f.velocity.y=-f.velocity.y),(k[3*e]<-p||k[3*e]>p)&&(f.velocity.x=-f.velocity.x),(k[3*e+2]<-p||k[3*e+2]>p)&&(f.velocity.z=-f.velocity.z),!(q.limitConnections&&f.numConnections>=q.maxConnections))for(var g=e+1;g<n;g++){var j=d[g];if(!(q.limitConnections&&j.numConnections>=q.maxConnections)){var m=k[3*e]-k[3*g],o=k[3*e+1]-k[3*g+1],r=k[3*e+2]-k[3*g+2],s=Math.sqrt(m*m+o*o+r*r);if(s<q.minDistance){f.numConnections++,j.numConnections++;var v=1-s/q.minDistance;h[a++]=k[3*e],h[a++]=k[3*e+1],h[a++]=k[3*e+2],h[a++]=k[3*g],h[a++]=k[3*g+1],h[a++]=k[3*g+2],i[b++]=v,i[b++]=v,i[b++]=v,i[b++]=v,i[b++]=v,i[b++]=v,c++}}}}l.geometry.setDrawRange(0,2*c),l.geometry.attributes.position.needsUpdate=!0,l.geometry.attributes.color.needsUpdate=!0,requestAnimationFrame(t),u()}function u(){g.render(f,e)}var a,b,e,f,g,h,i,j,k,l,d=[],m=500,n=170,o=1e3,p=o/2,q={minDistance:200,limitConnections:!1,maxConnections:20,particleCount:500};r(),t()}();
     </script>
-  </body>
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-62962703-3', 'auto');
+    ga('send', 'pageview');
+    </script>
+</body>
+
 </html>
 <!-- IE needs 512+ bytes: http://blogs.msdn.com/b/ieinternals/archive/2010/08/19/http-error-pages-in-internet-explorer.aspx -->
