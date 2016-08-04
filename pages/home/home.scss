@@ -22,21 +22,49 @@ body {
     }
 
     section {
+        position: relative;
+        z-index: $padds-index;
+        max-width: 48rem;
+        width: 100%;
+        padding: 2rem 1.5rem;
+        margin: 0 auto;
+        background-color: white;
+        // Works like display flex
+        font-size: 0;
+
+        -webkit-box-shadow: 0 2px 4px #aaa;
+        box-shadow: 0 2px 4px #aaa;
+
+        -webkit-transition: box-shadow .3s ease-out 0s;
+        -moz-transition: box-shadow .3s ease-out 0s;
+        -o-transition: box-shadow .3s ease-out 0s;
+        transition: box-shadow .3s ease-out 0s;
+
+        div.first {
+            display: block;
+            width: 100%;
+            font-size: $base-font-size;
+            vertical-align: top;
+
+            @media #{$bp-sm} {
+                display: inline-block;
+                width: 40%;
+            }
+        }
+
+        div.second {
+            display: block;
+            width: 100%;
+            font-size: $base-font-size;
+            vertical-align: top;
+
+            @media #{$bp-sm} {
+                display: inline-block;
+                width: 60%;
+            }
+        }
 
         &.about {
-            position: relative;
-            z-index: $padds-index;
-            max-width: 48rem;
-            width: 100%;
-            padding: 2rem 1.5rem;
-            margin: 0 auto;
-            background-color: white;
-            // Works like display flex
-            font-size: 0;
-            
-            -webkit-box-shadow: 0 5px 10px #aaa;
-            box-shadow: 0 5px 10px #aaa;
-
             .desktop-only {
                 display: none;
 
@@ -53,25 +81,6 @@ body {
                 }
             }
 
-            > div {
-                display: block;
-                width: 100%;
-                font-size: $base-font-size;
-                vertical-align: top;
-
-                @media #{$bp-sm} {
-                    display: inline-block;
-
-                    &.description {
-                        width: 60%;
-                    }
-
-                    &.profile {
-                        width: 40%;
-                    }
-                }
-            }
-
             .description {
 
                 h1 {
@@ -80,7 +89,7 @@ body {
                 }
 
                 h3 {
-                    color: #bfbfbf;
+                    color: $header-secondary;
                 }
 
                 p {
@@ -145,24 +154,44 @@ body {
                     text-align: left;
                     display: block;
                     margin: .5rem auto;
-
-                    &:hover {
-                        color: $highlight-primary;
-                    }
-
-                    span {
-                        font-size: .9rem;
-                        font-weight: bold;
-                    }
-
-                    i {
-                        font-size: 1.2rem;
-                        vertical-align: middle;
-                    }
                 }
 
                 @media #{$bp-sm} {
                     margin-top: 0;
+                }
+            }
+        }
+    
+        &.portfolio {
+            margin-top: 2rem;
+
+            h2 {
+                color: $header-secondary;
+                margin: 0 0 2em 0;
+
+                @media #{$bp-sm} {
+                    padding-left: 1rem;
+                }
+            }
+
+            .second.description {
+
+                h3 {
+                    color: $highlight-primary;
+                }
+
+                i {
+                    margin-right: .4em;
+                }
+
+                @media #{$bp-sm} {
+                    padding-right: 1rem;
+                }
+            }
+
+            .first {
+                img {
+                    width: 100%;
                 }
             }
         }

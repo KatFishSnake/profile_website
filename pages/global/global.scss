@@ -21,6 +21,8 @@ $primary: #333;
 $secondary: #222;
 $tertiary: #f0f0f0;
 
+$header-secondary: #bfbfbf;
+
 $highlight-primary: #65BE9A;
 
 // Values
@@ -136,6 +138,23 @@ footer {
     background: #ccc;
     color: #000;
     padding: 0.2em 0;
+}
+
+
+a.ico-link {
+    &:hover {
+        color: $highlight-primary;
+    }
+
+    span {
+        font-size: .9rem;
+        font-weight: bold;
+    }
+
+    i {
+        font-size: 1.2rem;
+        vertical-align: middle;
+    }
 }
 
 /* ==========================================================================

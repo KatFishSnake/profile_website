@@ -19,7 +19,7 @@ html.no-js(lang="")
 	body
 		.wrapper
 			section.about(itemscope itemprop="person" itemtype="http://schema.org/Person" url="andrekuznetcov.com")
-				.profile
+				.profile.first
 					.picture
 						img(src="/assets/profile.jpg" itemprop="image" alt="Shiny face of mine")
 					.soc-media
@@ -31,14 +31,14 @@ html.no-js(lang="")
 							i.pw-linkedin
 
 					.contact.desktop-only
-						a.email(href="#")
+						a.ico-link.email(href="#")
 							i.pw-paper-plane 
 							span(itemprop="email") Click to email
-						a.location(href="https://docs.google.com/document/d/1z3j3YSfN7Sclb5zokwfdUmXWPC5bNv6z4MZS_q9uqqU/export?format=pdf" target="_blank")
+						a.ico-link.location(href="https://docs.google.com/document/d/1z3j3YSfN7Sclb5zokwfdUmXWPC5bNv6z4MZS_q9uqqU/export?format=pdf" target="_blank")
 							i.pw-attachment 
 							span Download Resume
 
-				.description
+				.description.second
 					h1(itemprop="name") Andre Kuznetcov
 					h3(itemprop="jobTitle") Angular/Node Front-end Developer
 					p(itemprop="description") Hi, I'm a freelance web developer currently living in beautiful Vancouver. Most of my day I work on commercial and personal projects that usually end up being full-stack front-end.
@@ -50,12 +50,29 @@ html.no-js(lang="")
 							| &#128521
 
 				.contact.mobile-only
-					a.email(href="#")
+					a.ico-link.email(href="#")
 						i.pw-paper-plane 
 						span Click to email
-					a.location(href="https://docs.google.com/document/d/1z3j3YSfN7Sclb5zokwfdUmXWPC5bNv6z4MZS_q9uqqU/export?format=pdf" target="_blank")
+					a.ico-link.location(href="https://docs.google.com/document/d/1z3j3YSfN7Sclb5zokwfdUmXWPC5bNv6z4MZS_q9uqqU/export?format=pdf" target="_blank")
 						i.pw-attachment 
 						span Download Resume
+
+			section.portfolio
+				.first
+				.second
+					h2 Portfolio
+
+				article.coa
+					.second.description
+						h3 Children of Art Foundation
+						a.ico-link(href="http://childrenofart.com")
+							i.pw-link
+							span childrenofart.com
+						p Build from scratch as a substitution for older CMS based landing page. 
+					.first
+						.picture
+							img(src="/assets/coa.png" itemprop="image" alt="COA website snapshot")
+
 
 			footer
 				span.copy Copyright &copy; 2016
