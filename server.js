@@ -104,6 +104,7 @@ app.use("/assets", express.static(path.resolve(config.path.assets)));
 app.use("/robots.txt", express.static(path.resolve(__dirname + "/robots.txt")));
 app.use("/humans.txt", express.static(path.resolve(__dirname + "/humans.txt")));
 app.use("/sitemap.xml", express.static(path.resolve(__dirname + "/sitemap.xml")));
+app.use("/.well-known", express.static(path.resolve("./.well-known")));
 
 // Download route for logo ( /involved/ambasador )
 app.get("/download/resume", function(req, res) {
@@ -148,3 +149,5 @@ app.use(function(err, req, res, next) {
  */
 app.listen(config.port);
 console.log("Listening on port: " + config.port);
+
+
