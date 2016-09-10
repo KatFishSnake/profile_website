@@ -23,18 +23,20 @@ html.no-js(lang="")
 					.picture
 						img(src="/assets/profile.jpg" itemprop="image" alt="Shiny face of mine")
 					.soc-media
-						a(href="https://github.com/KatFishSnake" title="Github profile" target="_blank")
+						a(href="https://github.com/KatFishSnake" title="Github profile" target="_blank" rel="noopener noreferrer")
 							i.pw-github
-						a(href="https://fishkatsnake.svbtle.com" title="Svbtle profile, blog" target="_blank")
+						a(href="https://fishkatsnake.svbtle.com" title="Svbtle profile, blog" target="_blank" rel="noopener noreferrer")
 							i.pw-svbtle
-						a(href="https://ca.linkedin.com/in/andrewebdev" title="LinkedIn profile" target="_blank")
+						a(href="https://ca.linkedin.com/in/andrewebdev" title="LinkedIn profile" target="_blank" rel="noopener noreferrer")
 							i.pw-linkedin
 
 					.contact.desktop-only
+						//- Updated by JS on load, to avoid email crawlers 
 						a.email(href="#")
 							i.pw-paper-plane 
 							span(itemprop="email") Click to email
-						a.location(href="https://docs.google.com/document/d/1z3j3YSfN7Sclb5zokwfdUmXWPC5bNv6z4MZS_q9uqqU/export?format=pdf" target="_blank")
+							
+						a.location(href="https://docs.google.com/document/d/1z3j3YSfN7Sclb5zokwfdUmXWPC5bNv6z4MZS_q9uqqU/export?format=pdf" target="_blank" rel="noopener noreferrer")
 							i.pw-attachment 
 							span Download Resume
 
@@ -50,10 +52,12 @@ html.no-js(lang="")
 							| &#128521
 
 				.contact.mobile-only
+					//- Updated by JS on load, to avoid email crawlers 
 					a.email(href="#")
 						i.pw-paper-plane 
 						span Click to email
-					a.location(href="https://docs.google.com/document/d/1z3j3YSfN7Sclb5zokwfdUmXWPC5bNv6z4MZS_q9uqqU/export?format=pdf" target="_blank")
+
+					a.location(href="https://docs.google.com/document/d/1z3j3YSfN7Sclb5zokwfdUmXWPC5bNv6z4MZS_q9uqqU/export?format=pdf" target="_blank" rel="noopener noreferrer")
 						i.pw-attachment 
 						span Download Resume
 
